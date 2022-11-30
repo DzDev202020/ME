@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="profilePicture">256dp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+</resources>

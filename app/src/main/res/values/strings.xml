@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">ME</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="signin">SignIn</string>
+    <string name="singup">singup</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="signup">SignUp</string>
+    <string name="fail_in_signin">SignIn Fail,Try again</string>
+    <string name="fail_in_signup">SignUp fail, Try again!</string>
+    <string name="keep_me_online">Keep me in</string>
+    <string name="my_picture">Picture</string>
+    <string name="upload_new_picture">Do want to upload a new picture for your profile</string>
+    <string name="cancel">Cancel</string>
+    <string name="select">Select</string>
+    <string name="delete_picture">Do you want to delete your picture?</string>
+    <string name="error_when_selecting_picture">Error when selecting your picture</string>
+    <string name="permission">Permission</string>
+    <string name="need_permission_message">We need permission inorder to upload your picture</string>
+    <string name="give">GIVE</string>
+    <string name="no_permission_no_upload">No permission, No upload</string>
+    <string name="progress">Progress</string>
+    <string name="logout">logout</string>
+    <string name="empty_email_error_message">Write your email</string>
+    <string name="empty_password_error_message">Write your password</string>
+    <string name="full_name_error_message">Unacceptable full name</string>
+    <string name="fail_download_picture">Fail download picture</string>
+    <string name="fail_delete_picture">Fail delete picture</string>
+    <string name="done_delete_picture">Profile picture deleted</string>
+    <string name="fail_upload_picture">Fail upload picture</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.amk.me.viewmodel.ProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.ProfileActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profilePicture"
+            style="@style/CircleImageView"
+            android:layout_width="@dimen/profilePicture"
+            android:layout_height="@dimen/profilePicture"
+            android:layout_marginTop="@dimen/_16dp"
+            android:clickable="@{!viewmodel.onUploadPicture}"
+            android:onClick="onPictureClick"
+            android:padding="4dp"
+            android:src="@drawable/icon_holder_square"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <com.google.android.material.progressindicator.CircularProgressIndicator-->
+        <!--            android:id="@+id/pictureProgress"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:indeterminate="true"-->
+        <!--            android:visibility="@{viewmodel.onUploadPicture?View.VISIBLE:View.GONE}"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/profilePicture"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/profilePicture" />-->
+        <!--        <com.google.android.material.progressindicator.CircularProgressIndicator-->
+        <!--            android:id="@+id/pictureProgress"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:indeterminate="true"-->
+        <!--            android:visibility="@{viewmodel.onUploadPicture?View.VISIBLE:View.GONE}"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/profilePicture"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/profilePicture"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/profilePicture"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/profilePicture" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/progressText"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/_16dp"-->
+        <!--            android:pictureProgress="@{viewmodel.pictureUploadProgress}"-->
+        <!--            android:visibility="@{viewmodel.onUploadPicture? View.VISIBLE: View.GONE}"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/pictureProgress"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/pictureProgress"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/pictureProgress" />-->
+
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/progressText"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="@dimen/_16dp"-->
+        <!--            android:layout_marginTop="@dimen/_16dp"-->
+        <!--            android:visibility="@{viewmodel.onUploadPicture? View.VISIBLE: View.GONE}"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/profilePicture"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/profilePicture"-->
+        <!--            app:pictureProgress="@{viewmodel.pictureUploadProgress}" />-->
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/pictureProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:indeterminate="true"
+            android:visibility="@{viewmodel.onUploadPicture?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/progressText"
+            app:layout_constraintStart_toEndOf="@id/progressText"
+            app:layout_constraintTop_toTopOf="@id/progressText" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:visibility="@{viewmodel.onUploadPicture? View.VISIBLE: View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pictureProgress="@{viewmodel.pictureUploadProgress}" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fullname"
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16dp"
+            android:text="@{viewmodel.user}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profilePicture" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logoutButton"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="logout"
+            android:text="@string/logout"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
